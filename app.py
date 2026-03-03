@@ -9,6 +9,8 @@ st.set_page_config(layout="wide")
 # Title of the page
 st.title("IPL Win Predictor")
 
+st.caption("Created by Harsenth")
+
 # Importing data an model from pickel
 teams = pkl.load(open('team.pkl','rb'))
 cities = pkl.load(open('city.pkl','rb'))
@@ -64,7 +66,8 @@ if st.button('Predict Probabilities'):
     st.header(batting_team + " - " + str(round(win*100)) + "%")
     st.header(bowling_team + " - " + str(round(loss*100)) + "%")
 
-
+st.markdown("---")
+st.markdown("<center>Created by Harsenth</center>", unsafe_allow_html=True)
 
 
 
